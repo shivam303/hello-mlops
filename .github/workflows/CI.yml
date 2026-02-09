@@ -16,7 +16,7 @@ jobs:
 
         steps: 
             - name: Checkout
-              uses: acions/checkout@v4
+              uses: actions/checkout@v4
 
             - name: Setup python
               uses: actions/setup-python@v4
@@ -35,7 +35,7 @@ jobs:
                 ls -la artifacts
 
             - name: Upload artifacts
-              uses: actions/upload_artifact@v4
+              uses: actions/upload-artifact@v4
               with: 
                 name: ml-artifacts-${{matrix.python}}-${{github.run_id}}
                 path: artifacts
